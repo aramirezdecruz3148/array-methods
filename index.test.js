@@ -17,12 +17,28 @@ describe('creating my own array method functions', () => {
     expect(mapping).toEqual(['TESTING', 'THIS', 'AGAIN']);
   });
 
-  it('filter function: returns the filtered new array', () => {
+  it('filter function: returns the filtered new array with numbers greater than 2', () => {
     const array = [1, 2, 3, 4];
     const filtering = filterFunction(array, callback => {
       return callback > 2;
     });
     expect(filtering).toEqual([3, 4]);
+  });
+
+  it('filter function: returns the filtered new array with only even numbers', () => {
+    const array = [1, 2, 3, 4];
+    const filtering = filterFunction(array, callback => {
+      return callback % 2 === 0;
+    });
+    expect(filtering).toEqual([2, 4]);
+  });
+
+  it('filter function: returns the filtered new array of strings with letter i', () => {
+    const array = ['hi', 'world', 'stuff', 'pix'];
+    const filtering = filterFunction(array, callback => {
+      return callback.includes('i');
+    });
+    expect(filtering).toEqual(['hi', 'pix']);
   });
 
   // it('findIndex function: returns the ')
