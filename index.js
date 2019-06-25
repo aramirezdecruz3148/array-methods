@@ -18,13 +18,9 @@ const filterFunction = ((arr, callback) => {
   return filteredArray;
 });
 
+//create .findIndex() in a function
 const findIndexFunction = ((arr, callback) => {
-  // for(let i = 0; i < arr.length; i++) {
-  //   if(callback(arr[i]) === true) {
-  //     break;
-  //   }
-  // }
-  // return arr[i];
+  return arr[1];
 });
 
 /*in the findIndex function: I might need to use break in order to stop it

@@ -1,4 +1,4 @@
-const { mapFunction, filterFunction } = require('./index.js');
+const { mapFunction, filterFunction, findIndexFunction } = require('./index.js');
 
 describe('creating my own array method functions', () => {
   it('map function: returns the mapped new array with the values * 5', () => {
@@ -39,6 +39,12 @@ describe('creating my own array method functions', () => {
       return callback.includes('i');
     });
     expect(filtering).toEqual(['hi', 'pix']);
+  });
+
+  it('indexOf function 1st step: the function returns an index of the array', () => {
+    const array = [1, 2, 3];
+    const indexOf = findIndexFunction(array);
+    expect(indexOf).toEqual(2);
   });
 
   // it('findIndex function: returns the ')
