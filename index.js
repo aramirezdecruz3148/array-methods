@@ -11,11 +11,18 @@ const mapFunction = ((arr, callback) => {
 const filterFunction = ((arr, callback) => {
   let filteredArray = [];
   for(let i = 0; i < arr.length; i++) {
-    if(callback[arr[i]] === true) {
-      filteredArray[i] = callback(arr[i]);
+    if(callback(arr[i]) === true) {
+      filteredArray[filteredArray.length] = arr[i];
     }
   }
+  return filteredArray;
 });
+
+/*in the findIndex function: I might need to use break in order to stop it
+from going through all the array*/
+
+/*in the reduce function, I need to write some logic to set the accumulator to
+the first index[0] or the initial value*/
 
 module.exports = {
   mapFunction,
