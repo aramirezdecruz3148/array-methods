@@ -12,8 +12,8 @@ describe('creating my own array method functions', () => {
   it('filter function: returns the filtered new array', () => {
     const array = [1, 2, 3, 4];
     const filtering = filterFunction(array, callback => {
-      return callback % 2 === 0;
+      return callback > 2;
     });
-    expect(filtering).toEqual([2, 4]);
+    expect(filtering).toEqual([3, 4]);
   });
 });
