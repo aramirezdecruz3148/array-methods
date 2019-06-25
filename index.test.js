@@ -1,4 +1,4 @@
-const { mapFunction } = require('./index.js');
+const { mapFunction, filterFunction } = require('./index.js');
 
 describe('creating my own array method functions', () => {
   it('map function: returns the mapped new array', () => {
@@ -7,5 +7,13 @@ describe('creating my own array method functions', () => {
       return callback * 5;
     });
     expect(mapping).toEqual([5, 10, 15, 20]);
+  });
+
+  it('filter function: returns the filtered new array', () => {
+    const array = [1, 2, 3, 4];
+    const filtering = filterFunction(array, callback => {
+      return callback % 2 === 0;
+    });
+    expect(filtering).toEqual([2, 4]);
   });
 });
