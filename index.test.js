@@ -45,7 +45,7 @@ describe('filter function', () => {
 });
 
 describe('indexOf function', () => {
-  it('the function returns an index of the array that includes letter d', () => {
+  it('the function returns the first index of the array that includes letter d', () => {
     const array = ['dude', 'hey', 'dog'];
     const indexOf = findIndexFunction(array, (item) => {
       return item.includes('d');
@@ -53,7 +53,15 @@ describe('indexOf function', () => {
     expect(indexOf).toEqual(0);
   });
 
-  it('the function returns the index of first item in array', () => {
+  it('the function returns -1', () => {
+    const array = ['sup', 'hey', 'coolio'];
+    const indexOf = findIndexFunction(array, (item) => {
+      return item.includes('d');
+    });
+    expect(indexOf).toEqual(-1);
+  });
+
+  it('the function returns index[1] of array', () => {
     const array = [1, 2, 3];
     const indexOf = findIndexFunction(array, (item) => {
       return item % 2 === 0;
@@ -83,6 +91,22 @@ describe('every function', () => {
     const array = [7, 5, 9];
     const every = everyFunction(array, (item) => {
       return item % 2 === 0;
+    });
+    expect(every).toBe(false);
+  });
+
+  it('the function returns true', () => {
+    const array = ['sure', 'sublime', 'super'];
+    const every = everyFunction(array, (item) => {
+      return item.includes('s');
+    });
+    expect(every).toBe(true);
+  });
+
+  it('the function returns false', () => {
+    const array = ['sure', 'fine', 'super'];
+    const every = everyFunction(array, (item) => {
+      return item.includes('q');
     });
     expect(every).toBe(false);
   });
