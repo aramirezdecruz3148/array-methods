@@ -11,7 +11,7 @@ const mapFunction = ((arr, callback) => {
 const filterFunction = ((arr, callback) => {
   let filteredArray = [];
   for(let i = 0; i < arr.length; i++) {
-    if(callback(arr[i]) === true) {
+    if(callback(arr[i])) {
       filteredArray[filteredArray.length] = arr[i];
     }
   }
@@ -21,7 +21,7 @@ const filterFunction = ((arr, callback) => {
 //create .findIndex() in a function
 const findIndexFunction = ((arr, callback) => {
   for(let i = 0; i < arr.length; i++) {
-    if(callback(arr[i]) === true) {
+    if(callback(arr[i])) {
       return i;
     } 
   }
@@ -35,7 +35,7 @@ the first index[0]*/
 //create .every() in a function
 const everyFunction = ((arr, callback) => {
   for(let i = 0; i < arr.length; i++) {
-    if(callback(arr[i]) === true) {
+    if(callback(arr[i])) {
       return true;
     }
   }
