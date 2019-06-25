@@ -18,6 +18,17 @@ const filterFunction = ((arr, callback) => {
   return filteredArray;
 });
 
+const findIndexFunction = ((arr, callback) => {
+  let newArray = [];
+  for(let i = 0; i < arr.length; i++) {
+    if(callback(arr[i]) === true) {
+      newArray[newArray.length] = arr[i];
+      break;
+    }
+  }
+  return newArray;
+});
+
 /*in the findIndex function: I might need to use break in order to stop it
 from going through all the array*/
 
@@ -26,5 +37,6 @@ the first index[0] or the initial value*/
 
 module.exports = {
   mapFunction,
-  filterFunction
+  filterFunction,
+  findIndexFunction
 };
