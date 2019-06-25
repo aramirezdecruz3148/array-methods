@@ -11,7 +11,7 @@ const mapFunction = ((arr, callback) => {
 const filterFunction = ((arr, callback) => {
   let filteredArray = [];
   for(let i = 0; i < arr.length; i++) {
-    if(arr[i] === true) {
+    if(callback[arr[i]] === true) {
       filteredArray[i] = callback(arr[i]);
     }
   }
