@@ -27,14 +27,22 @@ const findIndexFunction = ((arr, callback) => {
   }
 });
 
-/*in the findIndex function: I might need to use break in order to stop it
-from going through all the array*/
-
+//create .reduce() in a function
 /*in the reduce function, I need to write some logic to set the accumulator to
-the first index[0] or the initial value*/
+the first index[0]*/
+
+//create .every() in a function
+const everyFunction = ((arr, callback) => {
+  for(let i = 0; i < arr.length; i++) {
+    if(callback(arr[i]) === true) {
+      return true;
+    }
+  }
+});
 
 module.exports = {
   mapFunction,
   filterFunction,
-  findIndexFunction
+  findIndexFunction,
+  everyFunction
 };
