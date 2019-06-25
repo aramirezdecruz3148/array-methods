@@ -41,10 +41,18 @@ describe('creating my own array method functions', () => {
     expect(filtering).toEqual(['hi', 'pix']);
   });
 
-  it('indexOf function 1st step: the function returns an index of the array', () => {
+  // it('indexOf function 1st step: the function returns an index of the array', () => {
+  //   const array = [1, 2, 3];
+  //   const indexOf = findIndexFunction(array);
+  //   expect(indexOf).toEqual(2);
+  // });
+
+  it('indexOf function 2nd step: the function returns the index of first item in array that is true', () => {
     const array = [1, 2, 3];
-    const indexOf = findIndexFunction(array);
-    expect(indexOf).toEqual(2);
+    const indexOf = findIndexFunction(array, callback => {
+      return callback % 2 === 0;
+    });
+    expect(indexOf).toEqual(1);
   });
 
   // it('findIndex function: returns the ')
