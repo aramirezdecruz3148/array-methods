@@ -16,4 +16,6 @@ describe('creating my own array method functions', () => {
     });
     expect(filtering).toEqual([3, 4]);
   });
+
+  // it('findIndex function: returns the ')
 });
