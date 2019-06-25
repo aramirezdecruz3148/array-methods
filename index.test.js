@@ -53,17 +53,25 @@ describe('indexOf function', () => {
     expect(indexOf).toEqual(0);
   });
 
-  it('the function returns the index of first item in array that is true', () => {
+  it('the function returns the index of first item in array that if true', () => {
     const array = [1, 2, 3];
     const indexOf = findIndexFunction(array, callback => {
       return callback % 2 === 0;
     });
     expect(indexOf).toEqual(1);
   });
+
+  it('the function returns -1', () => {
+    const array = [1, 7, 3];
+    const indexOf = findIndexFunction(array, callback => {
+      return callback % 2 === 0;
+    });
+    expect(indexOf).toEqual(-1);
+  });
 });
 
 describe('every function', () => {
-  it('every function: the function returns true', () => {
+  it('the function returns true', () => {
     const array = [4, 2, 8];
     const every = everyFunction(array, callback => {
       return callback % 2 === 0;
