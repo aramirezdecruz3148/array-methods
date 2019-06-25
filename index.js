@@ -19,14 +19,12 @@ const filterFunction = ((arr, callback) => {
 });
 
 const findIndexFunction = ((arr, callback) => {
-  let newArray = [];
-  for(let i = 0; i < arr.length; i++) {
-    if(callback(arr[i]) === true) {
-      newArray[newArray.length] = arr[i];
-      break;
-    }
-  }
-  return newArray;
+  // for(let i = 0; i < arr.length; i++) {
+  //   if(callback(arr[i]) === true) {
+  //     break;
+  //   }
+  // }
+  // return arr[i];
 });
 
 /*in the findIndex function: I might need to use break in order to stop it
