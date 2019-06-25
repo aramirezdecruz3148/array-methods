@@ -39,6 +39,7 @@ const everyFunction = ((arr, callback) => {
       return true;
     }
   }
+  return false;
 });
 
 module.exports = {
